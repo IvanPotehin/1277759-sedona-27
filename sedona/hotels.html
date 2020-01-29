@@ -8,7 +8,7 @@
   <body class="catalog-page">
     <header>
       <a href="/" class="logo">
-        <img src="img/logo.png" alt="Седона">
+        <img src="img/logo.png" width="140" height="70" alt="Седона">
       </a>
       <nav class="main-menu">
         <ul>
@@ -20,10 +20,48 @@
       </nav>
     </header>
     <main>
+      <section class="filters">
+        <div class="block-options">
+          <div class="infrastructure">
+            <h3>Инфраструктура</h3>
+            <p><input type="checkbox" name="infrastructure-option1" checked>Бассеён</p>
+            <p><input type="checkbox" name="infrastructure-option2">Парковка</p>
+            <p><input type="checkbox" name="infrastructure-option3">Wi-fi</p>
+          </div>
+          <div class="type">
+            <h3>Тип жилья:</h3>
+            <p><input type="checkbox" name="type-option1" checked>Гостиница</p>
+            <p><input type="checkbox" name="type-option2" checked>Мотель</p>
+            <p><input type="checkbox" name="type-option3" checked>Апартаменты</p>
+          </div>
+          <div class="costs">
+            <h3>Стоимость в сутки (р):</h3>
+            <div class="borders">
+              <input type="text" name="costs-option2" value="">
+              <input type="text" name="costs-option3" value="">
+            </div>
+            <input type="range" min="0" max="4000" step="1" value="3000">
+            <input type="button" class="apply-filters" value="Показать">
+          </div>
+        </div>
+        <div class="block-results">
+          <p class="total">Найдено: <span>3</span></p>
+          <div class="sorting">
+            <p>Сортировка</p>
+            <input type="button" class="sorting-option" value="По цене">
+            <input type="button" class="sorting-option" value="По типу">
+            <input type="button" class="sorting-option" value="По рейтингу">
+          </div>
+          <div class="navigation">
+            <input type="button" class="up" value="По возрастанию">
+            <input type="button" class="down" value="По убыванию">
+          </div>
+        </div>
+      </section>
       <section class="hotels">
         <ul class="hotels-list">
           <li class="hotels-item amara">
-            <img src="img/hotels/amara-resort-spa/amara.png" alt="Amara Resort & Spa" class="hotel-image">
+            <img src="img/hotels/amara-resort-spa/amara.png" width="46" height="48" alt="Amara Resort & Spa" class="hotel-image">
             <div class="hotel-info">
               <h2 class="hotel-title">Amara Resort & Spa</h2>
               <p class="hotel-price">Гостиница <span>от 4000 р.</span></p>
@@ -40,7 +78,7 @@
             </div>
           </li>
           <li class="hotels-item desert">
-            <img src="img/hotels/desert-quail-inn/desert.png" alt="Desert Quail Inn" class="hotel-image">
+            <img src="img/hotels/desert-quail-inn/desert.png" width="46" height="48" alt="Desert Quail Inn" class="hotel-image">
             <div class="hotel-info">
               <h2 class="hotel-title">Desert Quail Inn</h2>
               <p class="hotel-price">Гостиница <span>от 3000 р.</span></p>
@@ -57,7 +95,7 @@
             </div>
           </li>
           <li class="hotels-item villas">
-            <img src="img/hotels/villas-at-poco-diablo/villas.png" alt="Villas at Poco Diablo" class="hotel-image">
+            <img src="img/hotels/villas-at-poco-diablo/villas.png" width="46" height="48" alt="Villas at Poco Diablo" class="hotel-image">
             <div class="hotel-info">
               <h2 class="hotel-title">Villas at Poco Diablo</h2>
               <p class="hotel-price">Гостиница <span>от 2000 р.</span></p>
@@ -77,29 +115,32 @@
       </section>
     </main>
     <footer>
-      <div class="footer-item hash-tag"></div>
+      <div class="footer-item hash-tag tel">
+        <p>#visitSEDONA</p>
+        <p>Тел: +7(495) 666-02-66</p>
+      </div>
       <div class="footer-item social">
         <ul>
           <li class="social-item twitter">
             <a href="https://twitter.com/htmlacademy_ru">
-              <img src="img/twitter.png" alt="Twitter">
+              <img src="img/twitter.png" width="46" height="48" alt="Twitter">
             </a>
           </li>
           <li class="social-item facebook">
             <a href="https://www.facebook.com/htmlacademy">
-              <img src="img/facebook.png" alt="Facebook">
+              <img src="img/facebook.png" width="46" height="48" alt="Facebook">
             </a>
           </li>
           <li class="social-item youtube">
             <a href="https://www.youtube.com/user/htmlacademyru">
-              <img src="img/youtube.png" alt="Youtube">
+              <img src="img/youtube.png" width="46" height="48" alt="Youtube">
             </a>
           </li>
         </ul>
       </div>
       <div class="footer-item academy">
         <a href="https://htmlacademy.ru/">
-          <img src="img/html_academy.png" alt="HTML Академия">
+          <img src="img/html_academy.png" width="200" height="48" alt="HTML Академия">
         </a>
       </div>
       <script src="js/scripts.js"></script>
