@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Гостиницы Седоны, г. Седона - официальный сайт</title>
+    <link rel="stylesheet" href="css/normalize.css?ver=1">
     <link rel="stylesheet" href="css/style.css?ver=1">
   </head>
   <body class="catalog-page">
     <header>
-      <a href="/" class="logo">
-        <img src="img/logo.png" width="140" height="70" alt="Седона">
+      <a href="/index.html" class="logo">
+        <img src="img/logo.png" width="140" height="70" alt="Логотип Седона">
       </a>
-      <nav class="main-menu">
+      <nav aria-label="Меню" class="main-menu">
         <ul>
-          <li class="menu-item"><a href="" class="link">Информация</a></li>
+          <li class="menu-item"><a href="/#information" class="link">Информация</a></li>
           <li class="menu-item"><a href="" class="link">Фото и видео</a></li>
-          <li class="menu-item"><a href="" class="link">Карта штата</a></li>
-          <li class="menu-item"><a href="" class="link">Гостиница</a></li>
+          <li class="menu-item"><a href="/#map" class="link">Карта штата</a></li>
+          <li class="menu-item"><a href="/hotels.html" class="link">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -24,37 +25,68 @@
         <div class="block-options">
           <div class="infrastructure">
             <h3>Инфраструктура</h3>
-            <label><input type="checkbox" name="infrastructure-option1" checked>Бассейн</label>
-            <label><input type="checkbox" name="infrastructure-option2">Парковка</label>
-            <label><input type="checkbox" name="infrastructure-option3">Wi-fi</label>
+            <ul>
+              <li>
+                <input type="checkbox" id="infrastructure-bas" name="infrastructure-option1" checked>
+                <label for="infrastructure-bas">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" id="infrastructure-parking" name="infrastructure-option2">
+                <label for="infrastructure-parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" id="infrastructure-net" name="infrastructure-option3">
+                <label for="infrastructure-net">Wi-fi</label>
+              </li>
+            </ul>
           </div>
           <div class="type">
             <h3>Тип жилья:</h3>
-            <label><input type="checkbox" name="type-option1" checked>Гостиница</label>
-            <label><input type="checkbox" name="type-option2" checked>Мотель</label>
-            <label><input type="checkbox" name="type-option3" checked>Апартаменты</label>
+            <ul>
+              <li>
+                <input type="checkbox" id="type-hotel" name="type-option1" checked>
+                <label for="type-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" id="type-motel" name="type-option2" checked>
+                <label for="type-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" id="type-apart" name="type-option3" checked>
+                <label for="type-apart">Апартаменты</label>
+              </li>
+            </ul>
           </div>
           <div class="costs">
             <h3>Стоимость в сутки (р):</h3>
             <div class="borders">
-              <input type="text" name="costs-option2" value="0">
-              <input type="text" name="costs-option3" value="3000">
+              <p>
+                <label for="costs-option2" class="visually-hidden">Минимальное значение</label>
+                <input type="text" id="costs-option2" name="costs-option2" value="0">
+              </p>
+              <p>
+                <label for="costs-option3" class="visually-hidden">Максимальное значение</label>
+                <input type="text" id="costs-option3" name="costs-option3" value="3000">
+              </p>
             </div>
-            <input type="range" min="0" max="4000" step="1" value="3000">
-            <input type="button" class="apply-filters" value="Показать">
+            <p>
+              <label for="costs-option3" class="visually-hidden">Ползунок выбора цены</label>
+              <input type="range" min="0" max="4000" step="1" value="3000">
+            </p>
+            <button type="button" class="apply-filters">Показать</button>
           </div>
         </div>
         <div class="block-results">
           <p class="total">Найдено: <span>3</span></p>
           <div class="sorting">
             <p>Сортировка</p>
-            <input type="button" class="sorting-option" value="По цене">
-            <input type="button" class="sorting-option" value="По типу">
-            <input type="button" class="sorting-option" value="По рейтингу">
+            <button type="button" class="sorting-option">По цене</button>
+            <button type="button" class="sorting-option">По типу</button>
+            <button type="button" class="sorting-option">По рейтингу</button>
           </div>
           <div class="navigation">
-            <input type="button" class="up" value="По возрастанию">
-            <input type="button" class="down" value="По убыванию">
+            <button type="button" class="up">По возрастанию</button>
+            <button type="button" class="down">По убыванию</button>
           </div>
         </div>
       </section>
@@ -67,7 +99,7 @@
               <p class="hotel-price">Гостиница <span>от 4000 р.</span></p>
               <div class="block-hotel-link">
                 <a href="" class="more">Подробнее</a>
-                <input type="button" class="book-now" value="Забронировать">
+                <button type="button" class="book-now">Забронировать</button>
               </div>
             </div>
             <div class="hotel-reputation">
@@ -84,7 +116,7 @@
               <p class="hotel-price">Гостиница <span>от 3000 р.</span></p>
               <div class="block-hotel-link">
                 <a href="" class="more">Подробнее</a>
-                <input type="button" class="book-now" value="Забронировать">
+                <button type="button" class="book-now">Забронировать</button>
               </div>
             </div>
             <div class="hotel-reputation">
@@ -101,7 +133,7 @@
               <p class="hotel-price">Гостиница <span>от 2000 р.</span></p>
               <div class="block-hotel-link">
                 <a href="" class="more">Подробнее</a>
-                <input type="button" class="book-now" value="Забронировать">
+                <button type="button" class="book-now">Забронировать</button>
               </div>
             </div>
             <div class="hotel-reputation">
@@ -117,7 +149,7 @@
     <footer>
       <div class="footer-item hash-tag tel">
         <p>#visitSEDONA</p>
-        <p>Тел: +7(495) 666-02-66</p>
+        <a href="tel:+74985550266">Тел: +7(495) 666-02-66</a>
       </div>
       <div class="footer-item social">
         <ul>

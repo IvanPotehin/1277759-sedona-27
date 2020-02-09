@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Туристические гостиницы Седоны, г. Седона - официальный сайт</title>
+    <link rel="stylesheet" href="css/normalize.css?ver=1">
     <link rel="stylesheet" href="css/style.css?ver=1">
   </head>
   <body class="main-page">
     <header>
-      <a href="/" class="logo">
-        <img src="img/logo.png" width="140" height="70" alt="Седона">
+      <a href="/index.html" class="logo">
+        <img src="img/logo.png" width="140" height="70" alt="Логотип Седона">
       </a>
-      <nav class="main-menu">
+      <nav aria-label="Меню" class="main-menu">
         <ul>
-          <li class="menu-item"><a href="" class="link">Информация</a></li>
+          <li class="menu-item"><a href="/#information" class="link">Информация</a></li>
           <li class="menu-item"><a href="" class="link">Фото и видео</a></li>
-          <li class="menu-item"><a href="" class="link">Карта штата</a></li>
-          <li class="menu-item"><a href="" class="link">Гостиница</a></li>
+          <li class="menu-item"><a href="/#map" class="link">Карта штата</a></li>
+          <li class="menu-item"><a href="/hotels.html" class="link">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -33,14 +34,14 @@
         </div>
       </section>
 
-      <section class="advantages">
+      <section id="information" class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul>
           <li class="gorod">
             <div class="advantages-line">
               <div class="card">
                 <h3 class="card-title">Настоящий<br>городок</h3>
-                <span class="card-info">- №1 -</span>
+                <span class="card-info">№1</span>
                 <p class="card-info">Седона — не аттракцион для туристов,<br>там течёт своя жизнь</p>
               </div>
               <img src="img/gorod.png" width="800" height="256" alt="Городок" class="card-long">
@@ -71,7 +72,7 @@
               <img src="img/most.png" width="800" height="256" alt="Мост дьявола" class="card-long">
               <div class="card">
                 <h3 class="card-title">Там есть<br>мост дьявола</h3>
-                <span class="card-info">- №2 -</span>
+                <span class="card-info">№2</span>
                 <p class="card-info">Да, по нему можно пройти! Если конечно<br>вы осмелитесь</p>
               </div>
             </div>
@@ -79,21 +80,21 @@
               <li>
                 <div class="card">
                   <h4 class="card-title">Небольшая<br>площадь</h4>
-                  <span class="card-info">- 3 -</span>
+                  <span class="card-info">3</span>
                   <p class="card-info">Все достопримечательности<br>находятся очень близко</p>
                 </div>
               </li>
               <li>
                 <div class="card">
                   <h4 class="card-title">Красивая<br>дорога</h4>
-                  <span class="card-info">- 4 -</span>
+                  <span class="card-info">4</span>
                   <p class="card-info">Ехать в седону из лас-вегаса совсем<br>нескучно!</p>
                 </div>
               </li>
               <li>
                 <div class="card">
                   <h4 class="card-title">Мало<br>туристов</h4>
-                  <span class="card-info">- 5 -</span>
+                  <span class="card-info">5</span>
                   <p class="card-info">Большинство едет в гранд каньон<br>и толпится там</p>
                 </div>
               </li>
@@ -107,33 +108,33 @@
           <p class="search-info">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <article class="search-form">
             <h3 class="search-header">Поиск гостиницы в седоне</h3>
-            <div class="form-content">
+            <form class="form-content">
               <div class="arrival-container">
-                <p class="label">Дата заезда:</p>
-                <input type="text" class="arrival-control" value="24 апреля 2017">
+                <label for="arrival" class="label">Дата заезда:</label>
+                <input type="text" id="arrival" class="arrival-control" name="arrival" value="24 апреля 2017">
               </div>
               <div class="departure-container">
-                <p class="label">Дата выезда:</p>
-                <input type="text" class="departure-control" value="4 июля 2017">
+                <label for="departure" class="label">Дата выезда:</label>
+                <input type="text" id="departure" class="departure-control" name="departure" value="4 июля 2017">
               </div>
               <div class="guest-container">
                 <div class="adults">
-                  <p class="label">Взрослые:</p>
-                  <input type="text" class="adults-control" value="2">
+                  <label for="adults" class="label">Взрослые:</label>
+                  <input type="text" id="adults" class="adults-control" name="adults" value="2">
                 </div>
                 <div class="children">
-                  <p class="label">Дети:</p>
-                  <input type="text" class="children-control" value="0">
+                  <label for="children" class="label">Дети:</label>
+                  <input type="text" id="children" class="children-control" name="children" value="0">
                 </div>
               </div>
               <div class="link-container">
-                <input type="button" value="Найти">
+                <button type="submit">Найти</button>
               </div>
-            </div>
+            </form>
           </article>
         </div>
       </section>
-      <section class="map">
+      <section id="map" class="map">
         <h2 class="visually-hidden">Расположение</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11011.241464342931!2d-111.78498887273734!3d34.864727511793646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1580233040343!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen=""></iframe>
       </section>
@@ -141,7 +142,7 @@
     <footer>
       <div class="footer-item hash-tag tel">
         <p>#visitSEDONA</p>
-        <p>Тел: +7(495) 666-02-66</p>
+        <a href="tel:+74986660266">Тел: +7(495) 666-02-66</a>
       </div>
       <div class="footer-item social">
         <ul>
