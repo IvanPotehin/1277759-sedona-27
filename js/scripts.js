@@ -12,5 +12,4 @@ btn_search_formm.addEventListener('click', function(evt){
   } else {
     search_form.classList.add('modal-show');
   };
-  dateEntry.focus();
 });
