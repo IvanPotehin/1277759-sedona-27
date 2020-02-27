@@ -1,11 +1,16 @@
-window.onload = function () {
-  var search_form = document.getElementsByClassName('search-header'),
-      search_form_close = document.getElementsByClassName('search-header.close');
-  search_form.onclick = function() {
-    search_form.style.display = 'none';
-  }
-  search_form_close.onclick = function() {
-    search_form_close.classList.remove("close");
-  }
+var btn_search_formm = document.querySelector('.search-header'),
+    search_form = document.querySelector('.form-content');
 
-}
+search_form.classList.add('modal');
+
+btn_search_formm.addEventListener('click', function(evt){
+  evt.preventDefault();
+  if(search_form.classList.contains('modal-show')) {
+    search_form.classList.remove('modal-show');
+    search_form.classList.remove('modal-error');
+
+  } else {
+    search_form.classList.add('modal-show');
+  };
+  dateEntry.focus();
+});
