@@ -94,6 +94,7 @@ a {
     position: relative;
     width: 100%;
     max-width: 1200px;
+    min-width: 1200px;
     margin: 0 auto;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
@@ -186,6 +187,8 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    min-height: 56px
+;
 }
 
 .menu-item:nth-child(1) {
@@ -421,8 +424,6 @@ a {
 }
 
 .calendar {
-    position: absolute;
-    right: 10px;
     fill: #cacaca;
     cursor: pointer;
 }
@@ -706,7 +707,7 @@ a {
 }
 
 .block-hotel-link .book-now:focus {
-    outline: none;
+    outline: -webkit-focus-ring-color auto 1px;
 }
 
 .block-hotel-link .book-now {
@@ -856,7 +857,7 @@ a {
 }
 
 .navigation .svg-btn:focus, .navigation .up:focus, .navigation .down:focus {
-    outline: none;
+    outline: -webkit-focus-ring-color auto 1px;
 }
 
 .active .svg-btn {
@@ -891,6 +892,14 @@ a {
 
 .filters-options:checked + .label-checkbox:before {
     background: url("../img/svg/checkbox-on.svg") no-repeat;
+}
+
+.filters-options:disabled + .label-checkbox:before {
+    background: url("../img/svg/checkbox-off-disabled.svg") no-repeat;
+}
+
+.filters-options:checked:disabled + .label-checkbox:before {
+    background: url("../img/svg/checkbox-on-disabled.svg") no-repeat;
 }
 
 .filters-list-item {
@@ -940,6 +949,7 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     padding-left: 47px;
+    align-items: center;
 }
 
 .costs-input.before {
@@ -1007,7 +1017,7 @@ a {
 .range-controls .bar {
     width: 80%;
     height: 2px;
-    background: #ffffff;
+    background: #fff;
 }
 
 .range-toggle {
@@ -1016,7 +1026,7 @@ a {
     width: 20px;
     height: 20px;
     background: #ababab;
-    border: 8px solid #ffffff;
+    border: 8px solid #fff;
     border-radius: 50%;
     -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
@@ -1024,7 +1034,18 @@ a {
 }
 
 .range-toggle:hover {
-    background: #1c4f80;
+    width: 22px;
+    height: 22px;
+    top: -10px;
+    border: 9px solid #fff;
+}
+
+.range-toggle-max:hover {
+    left: calc(80% - 1px);
+}
+
+.range-toggle-min:hover {
+    left: -1px;
 }
 
 .range-toggle-min {
@@ -1056,10 +1077,6 @@ a {
     background: #fff;
 }
 
-.apply-filters:focus {
-    outline: none;
-}
-
 .input-price {
     border: 0;
     background: transparent;
@@ -1068,6 +1085,7 @@ a {
     display: block;
     width: 50px;
     margin-left: 6px;
+    min-height: 34px;
 }
 
 .costs-input.after {
@@ -1126,7 +1144,7 @@ a {
 }
 
 .sorting-option:focus {
-    outline: none;
+    outline: -webkit-focus-ring-color auto 1px;
 }
 
 .search-input-btn:focus, .children-control-input:focus {
@@ -1238,4 +1256,20 @@ a {
     -o-transition: transform 1s ease;
     transition: transform 1s ease;
     transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.filters-options:focus + .label-checkbox:before {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+.calendar-block {
+    width: 21px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+}
+
+.range-toggle {
+    flex-wrap: wrap;
+    display: flex;
 }
