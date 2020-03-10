@@ -131,10 +131,10 @@ a {
 
 .main-slider {
     position: relative;
-    background: #f2f2f2 url('../img/background.jpg') no-repeat;
+    background: #6c95bb url('../img/background.jpg') no-repeat;
     background-size: cover;
-    min-height: 512px;
-    padding-top: 80px;
+    min-height: 507px;
+    padding-top: 75px;
 }
 
 .main-slider .container {
@@ -780,7 +780,7 @@ a {
 .block-options {
     display: inherit;
     min-height: 217px;
-    background: #6c95bb url('../img/filter-background.png') no-repeat;
+    background: #6c95bb url('../img/filter_background.jpg') no-repeat;
     padding: 25px 70px 0 70px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1220,7 +1220,7 @@ a {
 }
 
 .card-info {
-    max-width: 280px;
+    max-width: 305px;
 }
 
 .advantages {
@@ -1267,9 +1267,18 @@ a {
     height: 22px;
     position: absolute;
     right: 10px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 .range-toggle {
     flex-wrap: wrap;
     display: flex;
+}
+
+.map {
+    background-image: url('../img/map_no_script.jpg');
+    min-height: 599px;
 }
