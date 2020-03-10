@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Туристические гостиницы Седоны, г. Седона - официальный сайт</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="main-page">
     <div class="main-container">
@@ -31,7 +31,7 @@
         </section>
         <section class="main-welcome">
           <div class="container">
-            <h2 class="main-title">Седона — небольшой городок в аризоне,<br>заслуживающий большего!</h2>
+            <h2 class="main-title">Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
             <p class="motivator">Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
           </div>
         </section>
@@ -42,7 +42,7 @@
               <li class="gorod">
                 <div class="advantages-line col-6">
                   <div class="card col-2">
-                    <h3 class="card-title">Настоящий<br>городок</h3>
+                    <h3 class="card-title">Настоящий городок</h3>
                     <span class="card-info number"> №1 </span>
                     <p class="card-info">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                   </div>
@@ -52,19 +52,19 @@
                   <li class="advantages-item col-2">
                     <div class="card col-6">
                       <h4 class="card-title icon-1">Жильё</h4>
-                      <p class="card-info">Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
+                      <p class="card-info">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                     </div>
                   </li>
                   <li class="advantages-item col-2">
                     <div class="card col-6">
                       <h4 class="card-title icon-2">Еда</h4>
-                      <p class="card-info">Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
+                      <p class="card-info">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                     </div>
                   </li>
                   <li class="advantages-item col-2">
                     <div class="card col-6">
                       <h4 class="card-title icon-3">Сувениры</h4>
-                      <p class="card-info">Не только китайского, но и местного<br>производства!</p>
+                      <p class="card-info">Не только китайского,  но и местного производства!</p>
                     </div>
                   </li>
                 </ul>
@@ -75,29 +75,29 @@
                   <div class="card col-2">
                     <h3 class="card-title">Там есть<br>мост дьявола</h3>
                     <span class="card-info number"> №2 </span>
-                    <p class="card-info">Да, по нему можно пройти! Если конечно<br>вы осмелитесь</p>
+                    <p class="card-info">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                   </div>
                 </div>
                 <ul class="most-advantages col-6">
                   <li class="advantages-item col-2">
                     <div class="card col-6">
-                      <h4 class="card-title">Небольшая<br>площадь</h4>
+                      <h4 class="card-title">Небольшая площадь</h4>
                       <span class="card-info number"> №3 </span>
-                      <p class="card-info">Все достопримечательности<br>находятся очень близко</p>
+                      <p class="card-info">Все достопримечательности находятся очень близко</p>
                     </div>
                   </li>
                   <li class="advantages-item col-2">
                     <div class="card col-6">
-                      <h4 class="card-title">Красивая<br>дорога</h4>
+                      <h4 class="card-title">Красивая дорога</h4>
                       <span class="card-info number"> №4 </span>
-                      <p class="card-info">Ехать в седону из лас-вегаса совсем<br>нескучно!</p>
+                      <p class="card-info">Ехать в седону из лас-вегаса совсем нескучно!</p>
                     </div>
                   </li>
                   <li class="advantages-item col-2">
                     <div class="card col-6">
-                      <h4 class="card-title">Мало<br>туристов</h4>
+                      <h4 class="card-title">Мало туристов</h4>
                       <span class="card-info number"> №5 </span>
-                      <p class="card-info">Большинство едет в гранд каньон<br>и толпится там</p>
+                      <p class="card-info">Большинство едет в гранд каньон и толпится там</p>
                     </div>
                   </li>
                 </ul>
@@ -113,17 +113,17 @@
               <button type="button" class="search-header">Поиск гостиницы в седоне</button>
             </div>
           </div>
-          <form class="form-content">
+          <form class="form-content" action="https://echo.htmlacademy.ru" method="post">
             <div class="arrival-container">
               <label for="arrival" class="label">Дата заезда:</label>
-              <input type="text" id="arrival" class="arrival-control" name="arrival" value="24 апреля 2017">
+              <input type="text" id="arrival" class="arrival-control" name="arrival" placeholder="24 апреля 2017" value="">
               <button class="calendar-block" aria-label="Календарь заезда">
                 <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
               </button>
             </div>
             <div class="departure-container">
               <label for="departure" class="label">Дата выезда:</label>
-              <input type="text" id="departure" class="departure-control" name="departure" value="4 июля 2017">
+              <input type="text" id="departure" class="departure-control" name="departure" placeholder="4 июля 2017" value="">
               <button class="calendar-block" aria-label="Календарь выезда">
                 <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg>
               </button>
@@ -133,7 +133,7 @@
                 <label for="adults" class="label">Взрослые:</label>
                 <div class="adults-control">
                   <button class="search-input-btn btn-small">-</button>
-                  <input type="text" id="adults" class="adults-control-input" name="adults" value="2">
+                  <input type="text" id="adults" class="adults-control-input" name="adults" placeholder="2" value="">
                   <button class="search-input-btn btn-more">+</button>
                 </div>
               </div>
@@ -141,7 +141,7 @@
                 <label for="children" class="label">Дети:</label>
                 <div class="children-control">
                   <button class="search-input-btn btn-small">-</button>
-                  <input type="text" id="children" class="children-control-input" name="children" value="0">
+                  <input type="text" id="children" class="children-control-input" name="children" placeholder="0" value="">
                   <button class="search-input-btn btn-more">+</button>
                 </div>
               </div>
@@ -189,6 +189,6 @@
         </div>
       </footer>
     </div>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

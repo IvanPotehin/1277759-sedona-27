@@ -43,6 +43,9 @@ a {
 .main-title {
     line-height: 27px;
     padding-top: 6px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
@@ -58,7 +61,7 @@ a {
 
 .col-2 {
     -ms-flex-preferred-size: 33.34%;
-    flex-basis: 33.34%;
+    flex-basis: 33.33%;
 }
 
 .col-3 {
@@ -133,7 +136,7 @@ a {
     position: relative;
     background: #6c95bb url('../img/background.jpg') no-repeat;
     background-size: cover;
-    min-height: 507px;
+    min-height: 510px;
     padding-top: 75px;
 }
 
@@ -245,6 +248,7 @@ a {
 
 .gorod-advantages {
     min-height: 330px;
+    flex-wrap: wrap;
 }
 
 .most-advantages {
@@ -253,6 +257,7 @@ a {
 
 .advantages-line {
     background-color: #81b3d2;
+    flex-wrap: wrap;
 }
 
 .card-info.number:before, .card-info.number:after {
@@ -331,6 +336,7 @@ a {
 
 .most-advantages {
     background: #eee;
+    flex-wrap: wrap;
 }
 
 .most-advantages .card {
@@ -558,7 +564,6 @@ a {
 }
 
 .social-item {
-    margin-right: 4px;
     width: 46px;
     height: 48px;
     display: -webkit-box;
@@ -573,7 +578,7 @@ a {
 }
 
 .hash-tag, .tel {
-    font-size: 20px;
+    font-size: 21px;
     color: #000;
     font-weight: bold;
 }
@@ -583,7 +588,8 @@ a {
 }
 
 .block-hash-tag-tel {
-    padding-left: 61px;
+    padding-top: 3px;
+    padding-left: 71px;
     display: initial;
     -webkit-box-pack: left;
     -ms-flex-pack: left;
@@ -618,7 +624,7 @@ a {
 }
 
 .hotels-item {
-    min-height: 152px;
+    min-height: 151px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -634,11 +640,12 @@ a {
 
 .hotel-title {
     line-height: 17px;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
     font-size: 21px;
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    display: block;
 }
 
 .hotel-title:hover {
@@ -664,6 +671,10 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.catalog-page .block-hash-tag-tel {
+    padding-left: 81px;
 }
 
 .block-hotel-link .more, .block-hotel-link .book-now {
@@ -791,7 +802,7 @@ a {
     display: inherit;
     min-height: 87px;
     background: #fff;
-    padding: 0 70px;
+    padding: 0 71px 0 73px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -885,9 +896,12 @@ a {
     display: inline-block;
     width: 27px;
     height: 23px;
-    margin-right: 13px;
+    margin-right: 16px;
     vertical-align: middle;
     background: url("../img/svg/checkbox-off.svg") no-repeat;
+    position: relative;
+    top: -1px;
+    right: -3px;
 }
 
 .filters-options:checked + .label-checkbox:before {
@@ -915,6 +929,7 @@ a {
 
 .costs.right .filters-title {
     margin-bottom: 10px;
+    padding-left: 2px;
 }
 
 .borders {
@@ -950,10 +965,17 @@ a {
     justify-content: center;
     padding-left: 47px;
     align-items: center;
+    position: relative;
 }
 
-.costs-input.before {
-    border-right: 2px solid #fff;
+.costs-input.before:before {
+    content: '';
+    display: block;
+    background: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAWCAQAAABA+IUiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAwoUJDM8C+KcAAAAHElEQVQI12P8/4OBgfH/fwYGJgYGWhIsDD8ZGACv4QUbpOL93QAAAABJRU5ErkJggg==') no-repeat;
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    right: -3px;
 }
 
 .scroll-price {
@@ -1089,7 +1111,7 @@ a {
 }
 
 .costs-input.after {
-    padding-left: 24px;
+    padding-left: 27px;
 }
 
 .search-input-btn {
@@ -1271,6 +1293,7 @@ a {
     background: transparent;
     padding: 0;
     margin: 0;
+    top: 8px;
 }
 
 .range-toggle {
@@ -1278,7 +1301,72 @@ a {
     display: flex;
 }
 
+.arrival-control[type=text]::-ms-clear, .departure-control[type=text]::-ms-clear {
+    display: none; width : 0; height: 0;
+}
+
+.arrival-control[type=text]::-ms-reveal, .departure-control[type=text]::-ms-reveal {
+    display: none; width : 0; height: 0;
+}
+
 .map {
     background-image: url('../img/map_no_script.jpg');
     min-height: 599px;
+}
+
+.card-title {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 160px;
+}
+
+.most-advantages .card-info {
+    max-width: 253px;
+    line-height: 21px;
+}
+
+.most-advantages .advantages-item:nth-child(2) .card-info {
+    max-width: 261px;
+}
+
+.social-item.twitter {
+    margin-right: 5px;
+}
+
+.social-item.facebook {
+    margin-right: 6px;
+}
+
+@keyframes cancellation {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    animation: cancellation 0.6s;
+}
+
+.red-border {
+    border: 1px solid red;
+}
+
+.arrival-control::placeholder, .departure-control::placeholder, .adults-control-input::placeholder, .children-control-input::placeholder {
+    color: #000;
 }
