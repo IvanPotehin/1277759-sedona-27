@@ -21,10 +21,10 @@ if(search_form !== null) {
     dateEntry.focus();
   });
 
-  search_form.addEventListener("submit", function (evt) {
+  search_form.addEventListener('submit', function (evt) {
     if (!arrival.value || !departure.value || !adults.value || !children.value) {
       evt.preventDefault();
-      search_form.classList.add("modal-error");
+      search_form.classList.add('modal-error');
     }
     else {
       return true;
